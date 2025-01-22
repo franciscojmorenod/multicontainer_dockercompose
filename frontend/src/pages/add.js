@@ -56,10 +56,9 @@ const Add = () => {
 
       return (
 
-        <div className="app-subtitle">
+        <div className="blog-preview">
  
-        <h1> Add User Page </h1>
-        <br></br>
+        <h1>ADD USER PAGE</h1>
 
         <form onSubmit={handleSubmit}>
 
@@ -75,10 +74,9 @@ const Add = () => {
           <tr> <td>Phone</td><td>     <input type="text" required value={phone} onChange={(e) => setPhone(e.target.value)}/></td>   </tr>
           </table>
         </div>
-
-        <br></br>
+        <div className="create button">
         <p><button>Submit New User</button></p>
-        <br></br>
+        </div>
         
       </form> 
 

@@ -84,10 +84,14 @@
  }
  
  .container th {
-       background-color: #1F2739;
+       background-color:  #1F2739;
  }
- 
- .container td:first-child { color: #FB667A; }
+
+ .container td {
+  background-color:   #551c2e;
+}
+
+ .container td:first-child { color: #f3d4d8; }
  
  .container tr:hover {
     background-color: #464A52;

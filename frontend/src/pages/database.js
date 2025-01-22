@@ -1,6 +1,7 @@
 // Filename - pages/about.js
+
 import '../index.css';
-import '../styles.css';
+// import '../styles.css';
 import React, { useState, useEffect } from 'react';
 let dbx = "";
 let xResult ="";
@@ -31,12 +32,20 @@ const Database= () => {
 
 
     return (
-        <div>
-            <h1 className="app-subtitle">
-                Database Settings Page
-            </h1>
-
-            <div className="app-subtitle">
+        <div className="blog-preview">
+            <h1 >DATABASE SETTINGS PAGE</h1>
+            <br></br>
+            <p></p>
+            <p>Query the Database for info related to the current setup</p>
+            {/* VERSION   : return the DB vesion */}
+            {/* HEALTH    : return the current health status  */}
+            {/* USER      : return the current DB user     */}
+            {/* DATE      : return the current DB date      */}
+            {/* DATABASES : return a list of Current DBs      */}
+            {/* TABLES    : return a list of Current Tables in the DBs                           */}
+            <br></br>
+            <p></p>
+            <div className="create button">
       <button type="button" onClick={handleClick1}  data-arg1="/api/dbversion">Version</button>
       <button type="button" onClick={handleClick1}  data-arg1="/api/healthz">Health </button>
       <button type="button" onClick={handleClick1}  data-arg1="/api/dbuser">User </button>
@@ -48,10 +57,8 @@ const Database= () => {
       {
         
         dbx == "oneliner" ? 
-        <div class="green-button">
-        <font size="4" face="verdana" color="#008000">
-        <b className="app-subtitle"> <p> {xResult.message} </p> </b>
-        </font>
+        <div className="movie-card">
+        <p> {xResult.message} </p>
           </div>
           : <p></p> 
           }

@@ -1,7 +1,7 @@
 // Filename - pages/blogs.js
-// import '../index.css';
-// import '../styles.css';
-  import '../table.css'
+import '../index.css';
+import '../styles.css';
+import '../table.css'
 import React, { useState, useEffect } from 'react';
 let dbx = "";
 let xResult ="";
@@ -31,8 +31,8 @@ const Users = () => {
       };
 
     return (
-    <div className="app-subtitle">
-        <h1  >Display Users</h1>
+    <div className="blog-preview">
+        <h1  >DISPLAY USERS</h1>
         <div className="app-subtitle">
             <button type="button" onClick={handleClick1} >Display All User</button>
         </div>
@@ -47,7 +47,7 @@ const Users = () => {
         <tr> 
           <td width="150">{userx.firstname}</td>
           <td width="150">{userx.lastname}</td> 
-          <td width="350">{userx.dob}</td>
+          <td width="150">{userx.dob.substring(0,10)}</td>
           <td width="75">{userx.sex}</td> 
           <td width="350">{userx.address}</td>
           <td width="200">{userx.email}</td> 
@@ -58,7 +58,7 @@ const Users = () => {
             
    
       : 
-      <p>Label is Empty</p> 
+      <p></p> 
      }
     </div>
 );

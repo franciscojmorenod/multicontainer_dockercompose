@@ -46,7 +46,7 @@ app.use(bodyParser.json())
 app.get("/", async function(req, res, next) {
   database.raw('select VERSION() version')
     .then(([rows, columns]) => rows[0])
-    .then((row) => res.json({ message: `Hello from MySQL ${row.version}` }))
+    .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
     // const results = await pool.query("SHOW DATABASES")
     // const rows = results[0];
@@ -57,21 +57,21 @@ app.get("/", async function(req, res, next) {
 app.get("/dbversion", function(req, res,next) {
   database.raw('select VERSION() version')
     .then(([rows, columns]) => rows[0])
-    .then((row) => res.json({ message: `Hello from MySQL ${row.version}` }))
+    .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
  });
 
 app.get("/dbuser", function(req, res,next) {
   database.raw('select USER() version')
     .then(([rows, columns]) => rows[0])
-    .then((row) => res.json({ message: `Hello from MySQL ${row.version}` }))
+    .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
  });
 
 app.get("/dbdate", function(req, res,next) {
   database.raw('select CURRENT_DATE version')
     .then(([rows, columns]) => rows[0])
-    .then((row) => res.json({ message: `Hello from MySQL ${row.version}` }))
+    .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
 });
 

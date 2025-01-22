@@ -17,7 +17,7 @@ code {
 * {
   margin: 0;
   font-family: "Quicksand";
-  color: #333;
+  color: #140101;
 }
 .navbar {
   padding: 20px;
@@ -51,16 +51,50 @@ code {
 .blog-preview {
   padding: 10px 16px;
   margin: 20px 0;
-  border-bottom: 1px solid #fafafa;
+  border-bottom: 1px solid #1b0101;
+  text-align:center;
 }
 .blog-preview:hover {
   box-shadow: 1px 3px 5px rgba(0,0,0,0.1);
 }
+.blog-preview h4 {
+  font-size: 14px;
+  color: #fffbfc;
+  margin-bottom: 8px;
+  margin-left: 50px;
+  text-align:left;
+}
+.blog-preview h3 {
+  font-size: 18px;
+  color: #f5c5d3;
+  margin-bottom: 8px;
+  margin-left: 40px;
+  text-align:left;
+}
+
 .blog-preview h2 {
   font-size: 20px;
-  color: #f1356d;
+  color: #e6cfd5;
   margin-bottom: 8px;
 }
+.blog-preview h1 {
+  font-size: 20px;
+  color: #f5c5d3;
+  margin-bottom: 8px;
+}
+.blog-preview p {
+  font-size: 20px;
+  color: #f7e0e7;
+  margin-bottom: 8px;
+}
+.blog-preview li {
+  font-size: 14px;
+  color: #fffbfc;
+  margin-bottom: 8px;
+  margin-left: 70px;
+  text-align:left;
+}
+
 .blog-preview a{
   text-decoration: none;
 }
@@ -107,12 +141,13 @@ code {
   display: block;
 }
 .create button {
-  background: #2e010f;
+  background: #551c2e;
   color: #fff;
   border: 0;
   padding: 8px;
   border-radius: 8px;
   cursor: pointer;
+  margin-left: 15px;
 }
 
 .create button2 {
@@ -146,7 +181,7 @@ code {
 
 .green-button {
   background-color: rgb(186, 238, 186);
-  color: white;
+  color: rgb(19, 0, 0);
   padding: 15px 25px;
   border: none;
   border-radius: 3px;

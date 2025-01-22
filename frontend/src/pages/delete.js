@@ -42,9 +42,9 @@ const Delete = () => {
 
 
     return (
-        <div className="app-subtitle">
-            <h1> Delete User Page </h1>
-          <br></br>
+        <div className="blog-preview">
+            <h1>DELETE USER PAGE</h1>
+
             <form onSubmit={handleSubmit}>
 
             <div className="app-subtitle">
@@ -55,11 +55,10 @@ const Delete = () => {
           </table>
         </div>
 
-     
      <br></br>
-     <br></br>
+      <div className="create button">
         <p><button>Delete Existing User</button></p>
-        <br></br>
+        </div>
         
       </form> 
 

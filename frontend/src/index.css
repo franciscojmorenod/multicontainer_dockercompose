@@ -171,7 +171,7 @@ code {
 
 .red-button {
   background-color: red;
-  color: white;
+  color: rgb(3, 77, 19);
   padding: 12px 18px;
   border: 2px solid white;
   border-radius: 8px;
@@ -180,8 +180,8 @@ code {
 }
 
 .green-button {
-  background-color: rgb(186, 238, 186);
-  color: rgb(19, 0, 0);
+  background-color: green;
+  color: white;
   padding: 15px 25px;
   border: none;
   border-radius: 3px;

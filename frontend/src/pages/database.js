@@ -53,7 +53,8 @@ const Database= () => {
       <button type="button" onClick={handleClick1}  data-arg1="/api/getdatabases">Databases</button>
       <button type="button" onClick={handleClick1}  data-arg1="/api/gettables">Tables</button>
       </div>
-
+      <br></br>
+      <br></br>
       {
         
         dbx == "oneliner" ? 
@@ -67,8 +68,8 @@ const Database= () => {
        {
     dbx == "tables" ?
     xResult.map((userx) => (
-        <div class="green-button">
-        <li  key={userx.Tables_in_fjmdDB}>
+        <div className="create-button">
+        <li  className="blue-button" key={userx.Tables_in_fjmdDB}>
          Table: {userx.Tables_in_fjmdDB}
         </li>
         </div>
@@ -79,8 +80,8 @@ const Database= () => {
  {
     dbx == "database" ?
     xResult.map((userx) => (
-        <div class="green-button">
-        <li  key={userx.Database}>
+      <div className="create-button">
+        <li className="green-button"   key={userx.Database}>
          Database: {userx.Database}
         </li>
         </div>
@@ -89,7 +90,7 @@ const Database= () => {
       <p></p> 
   }
 
-      
+<br></br>   
 
         </div>
     );

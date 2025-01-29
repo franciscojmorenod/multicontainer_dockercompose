@@ -1,4 +1,14 @@
 services:
+  backcustom:
+    #image: roboxes/centos8:latest
+    build:
+      args:
+      - NODE_ENV=development
+      context: backcustom
+    #command: sh -c "sleep infinity"
+    # ports:
+    #   - 127.0.0.1:3000:3000
+    #working_dir: .backcustom
   backend:
     build:
       args:

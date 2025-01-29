@@ -61,7 +61,7 @@ const App = () => {
       <br></br>
        <br></br>
          {
-        
+
         dbx == "oneliner" ? 
         <div class="green-button">
         <font size="4" face="verdana" color="#008000">
@@ -70,7 +70,7 @@ const App = () => {
           </div>
           : <p></p> 
           }
-      
+      {        console.log('We are inside app.js')}
     </div>
     
   );

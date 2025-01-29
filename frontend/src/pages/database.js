@@ -10,6 +10,7 @@ const Database= () => {
   const [data, setData] = useState(null);
     const handleClick1 = async (event) => {
         dbx ="oneliner";
+        console.log("there was a click on database");
         try {
             let arg1 = event.target.getAttribute('data-arg1');
             if(arg1.includes("tables")) dbx ="tables";

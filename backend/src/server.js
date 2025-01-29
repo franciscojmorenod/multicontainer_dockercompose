@@ -48,6 +48,7 @@ app.get("/", async function(req, res, next) {
     .then(([rows, columns]) => rows[0])
     .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
+    console.log("FJMD: backend_server : default //")
     // const results = await pool.query("SHOW DATABASES")
     // const rows = results[0];
     // res.json( rows)
@@ -59,6 +60,7 @@ app.get("/dbversion", function(req, res,next) {
     .then(([rows, columns]) => rows[0])
     .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
+    console.log("FJMD: backend_server : dbversion")
  });
 
 app.get("/dbuser", function(req, res,next) {
@@ -73,31 +75,37 @@ app.get("/dbdate", function(req, res,next) {
     .then(([rows, columns]) => rows[0])
     .then((row) => res.json({ message: `${row.version}` }))
     .catch(next);
+    console.log("FJMD: backend_server : dbdate")
 });
 
 app.get("/getdatabases", async function(req, res) {
+  console.log("FJMD: backend_server : getdatabse")
   const results = await pool.query("SHOW DATABASES")
   const rows = results[0];
   res.json( rows)
  });
 
 app.get("/gettables", async function(req, res) {
+  console.log("FJMD: backend_server : gettables")
   const results2 = await pool.query("SHOW TABLES")
   const rows = results2[0];
   res.json( rows)
 });
 
 app.get("/getusers", async function(req, res) {
+  console.log("FJMD: backend_server : getusers")
   const results3 = await pool.query("SELECT * FROM fm_users")
   const rows = results3[0];
   res.json( rows)
 });
 
 app.get("/healthz", function(req, res) {
+  console.log("FJMD: backend_server : healthz")
    res.json({ message: `I am happy and healthy\n` })
 });
 
 app.get("/insert", async function(req, res) {
+  console.log("FJMD: backend_server : insert")
 const results3 = await pool.query("INSERT INTO fm_users VALUES ('Test', 'Usuario', '1900-01-01', 'M', '1001 Main Road FL 33578', 'test@gmail.com', '123-4567890')");
 const rows = results3[0];
 res.json( rows)  
@@ -105,6 +113,7 @@ res.json( rows)
 });
 
 app.get("/delete", async function(req, res) {
+  console.log("FJMD: backend_server : get delete")
 const results3 = await pool.query("DELETE FROM fm_users WHERE ( firstname = 'Test' and phone = '123-4567890')");
 const rows = results3[0];
 res.json( rows)  
@@ -112,6 +121,7 @@ res.json( rows)
 
 
 app.post("/delete", async function(req, res) {
+  console.log("FJMD: backend_server : post deletez")
   const {firstname , lastname} = req.body;
   const qury = `DELETE FROM fm_users WHERE  (firstname = '${firstname}' and lastname = '${lastname}')`;
   const results3 = await pool.query(qury);
@@ -121,6 +131,7 @@ app.post("/delete", async function(req, res) {
   
 
 app.post("/insert", async function(req, res) {
+  console.log("FJMD: backend_server : post insert")
 const {firstname , lastname, dob, sex, address, email, phone} = req.body;
 const qury = `INSERT INTO fm_users VALUES ('${firstname}' , '${lastname}' , '${dob}' , '${sex}' , '${address}' , '${email}' , '${phone}')`;
 const results3 = await pool.query(qury);

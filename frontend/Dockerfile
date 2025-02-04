@@ -1,9 +1,11 @@
 # syntax=docker/dockerfile:1.4
 
-FROM node:lts AS development
+FROM node:latest AS development
 
 ENV CI=true
 ENV PORT=3000
+
+RUN echo "STEP 1"
 
 WORKDIR /code
 COPY package.json /code/package.json

@@ -2,12 +2,12 @@
 import '../index.css';
 import '../styles.css';
 import '../table.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 let dbx = "";
 let xResult ="";
 const Add = () => {
 
-  const [data, setData] = useState(null);
+  const [ setData] = useState(null);
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   const [dob, setDob] = useState('');
@@ -47,12 +47,6 @@ const Add = () => {
       return(xResult);
   }
 
-  const data2 = [
-    { name: "Anom", age: 19, gender: "Male" },
-    { name: "Megha", age: 19, gender: "Female" },
-    { name: "Subham", age: 25, gender: "Male" },
-]
-
 
       return (
 
@@ -82,7 +76,7 @@ const Add = () => {
 
       {
         
-        dbx == "oneliner" ? 
+        dbx === "oneliner" ? 
         <div class="green-button">
         <font size="4" face="verdana" color="#008000">
         <b className="app-subtitle"> <p> {xResult.message} </p> </b>

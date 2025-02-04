@@ -1,12 +1,12 @@
 import '../index.css';
 import '../styles.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 let dbx = "";
 let xResult ="";
 
 const Delete = () => {
 
-  const [data, setData] = useState(null);
+  const [ setData] = useState(null);
   const [firstname, setFirstname] = useState('');
   const [lastname, setLastname] = useState('');
   
@@ -67,7 +67,7 @@ const Delete = () => {
 
             {
         
-        dbx == "oneliner" ? 
+        dbx === "oneliner" ? 
         <div class="green-button">
         <font size="4" face="verdana" color="#008000">
         <b className="app-subtitle"> <p> {xResult.message} </p> </b>

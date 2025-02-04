@@ -2,12 +2,12 @@
 
 import '../index.css';
 // import '../styles.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 let dbx = "";
 let xResult ="";
 const Database= () => {
 
-  const [data, setData] = useState(null);
+  const [ setData] = useState(null);
     const handleClick1 = async (event) => {
         dbx ="oneliner";
         console.log("there was a click on database");
@@ -58,7 +58,7 @@ const Database= () => {
       <br></br>
       {
         
-        dbx == "oneliner" ? 
+        dbx === "oneliner" ? 
         <div className="movie-card">
         <p> {xResult.message} </p>
           </div>
@@ -67,7 +67,7 @@ const Database= () => {
 
 
        {
-    dbx == "tables" ?
+    dbx === "tables" ?
     xResult.map((userx) => (
         <div className="create-button">
         <li  className="blue-button" key={userx.Tables_in_fjmdDB}>
@@ -79,7 +79,7 @@ const Database= () => {
       <p></p> 
   }
  {
-    dbx == "database" ?
+    dbx === "database" ?
     xResult.map((userx) => (
       <div className="create-button">
         <li className="green-button"   key={userx.Database}>

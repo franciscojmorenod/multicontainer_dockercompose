@@ -1,7 +1,7 @@
 // App.js (React component)
 import './index.css';
 import './styles.css';
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import{  BrowserRouter,  Routes,  Route,  Link} from "react-router-dom";
 import Database from './pages/database';
 import Index from './pages/index';
@@ -18,7 +18,7 @@ import Footer from './components/Footer';
 let dbx = "";
 const App = () => {
   
-  const [data, setData] = useState(null);
+  const [data] = useState(null);
  
   return (
     <div className="App">
@@ -62,7 +62,7 @@ const App = () => {
        <br></br>
          {
 
-        dbx == "oneliner" ? 
+        dbx === "oneliner" ? 
         <div class="green-button">
         <font size="4" face="verdana" color="#008000">
         <b> <p> {data.message} </p> </b>

@@ -2,12 +2,12 @@
 import '../index.css';
 import '../styles.css';
 import '../table.css'
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 let dbx = "";
 let xResult ="";
 const Users = () => {
 
- const [data, setData] = useState(null);
+ const [ setData] = useState(null);
     const handleClick1 = async () => {
         dbx ="getusers";
        
@@ -39,7 +39,7 @@ const Users = () => {
 
         {
     
-       dbx == "getusers" ?
+       dbx === "getusers" ?
 
 
       xResult.map((userx) => (

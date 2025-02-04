@@ -1,0 +1,22 @@
+
+
+#Download image online:
+#On a machine with internet access, pull the desired Docker image using 
+docker pull <image_name>
+ex: docker pull node
+
+#Save the image to a file using 
+docker save -o <filename>.tar <image_name>
+
+#Transfer the image:
+Copy the saved image file (<filename>.tar) to the offline computer using a removable storage device like a USB drive.
+
+#Load image offline: (On the offline computer)
+docker load -i <filename>.tar
+
+
+# Build Image
+docker build -t bbb .
+
+# Create & Run Container
+docker run -dit -p 3001:80 --name fmcontainer bbb

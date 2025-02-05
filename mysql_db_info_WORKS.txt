@@ -1,0 +1,156 @@
+ALTER USER 'root'@'localhost' IDENTIFIED by 'sicurumero';
+
+mysql -u USERNAME -pPASSWORD -h HOSTNAMEORIP DATABASENAME 
+------------------------------------
+mysql -u root -pdb-btf5q 
+
+CREATE DATABASE fjmdDB;
+
+USE fjmdDB;
+
+CREATE TABLE fm_users ( firstname VARCHAR(20), lastname VARCHAR(20), dob DATE, sex CHAR(1), address VARCHAR(40), email VARCHAR(20), phone VARCHAR(20));
+
+INSERT INTO fm_users VALUES ('Francisco', 'Moreno', '1970-10-16', 'M', '9030 Pinebreeze Riveerview FL 33578', 'fmtest@gmail.com', '352-5754933');
+
+INSERT INTO fm_users VALUES ('Celina', 'Baena', '1969-06-26', 'F', '9030 Pinebreeze Riverview FL 33578', 'cbtest@gmail.com', '352-5755439');
+
+-------------------------------------
+
+SELECT VERSION(), CURRENT_DATE;
+	+-----------+--------------+
+	| VERSION() | CURRENT_DATE |
+	+-----------+--------------+
+	| 8.0.32    | 2024-11-29   |
+	+-----------+--------------+
+	1 row in set (0.00 sec)
+	
+SELECT USER();
+	+----------------+
+	| user()         |
+	+----------------+
+	| root@localhost |
+	+----------------+
+	1 row in set (0.01 sec)
+	
+	
+mysql> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+4 rows in set (0.01 sec)
+
+GRANT ALL ON menagerie.* TO 'your_mysql_name'@'your_client_host';
+
+CREATE DATABASE fjmdDB;
+Query OK, 1 row affected (0.01 sec)
+
+ SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| fjmdDB             |
+| information_schema |
+| mysql              |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.00 sec)
+
+mysql> USE fjmoreno_db
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+
+mysql> SHOW TABLES;
+Empty set (0.01 sec)
+
+mysql> CREATE TABLE pet (name VARCHAR(20), owner VARCHAR(20),
+    ->        species VARCHAR(20), sex CHAR(1), birth DATE, death DATE);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> show tables;
++-----------------------+
+| Tables_in_fjmoreno_db |
++-----------------------+
+| tutorials             |
++-----------------------+
+1 row in set (0.00 sec)
+
+
+
+mysql> SHOW TABLES;
++------------------+
+| Tables_in_fjmdDB |
++------------------+
+| pet              |
++------------------+
+1 row in set (0.00 sec)
+
+
+mysql> INSERT INTO pet VALUES ('Puffball','Diane','hamster','f','1999-03-30',NULL);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> INSERT INTO pet VALUES ('Luke','Celina','Dog','f','1969-06-26',NULL);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> INSERT INTO pet  VALUES ('Hans','Celina','Dog','f','1969-06-26',NULL);
+Query OK, 1 row affected (0.01 sec)
+
+
+
+mysql> SELECT * FROM pet;
++----------+--------+---------+------+------------+-------+
+| name     | owner  | species | sex  | birth      | death |
++----------+--------+---------+------+------------+-------+
+| Puffball | Diane  | hamster | f    | 1999-03-30 | NULL  |
+| Luke     | Celina | Dog     | f    | 1969-06-26 | NULL  |
+| Hans     | Celina | Dog     | f    | 1969-06-26 | NULL  |
++----------+--------+---------+------+------------+-------+
+3 rows in set (0.00 sec)
+
+
+curl --location 'http://localhost:6868/api/tutorials/' --header 'Content-Type: application/json' --data '{"title":"Star Wars","description":"The Empire Strkes Back", "published":true}'
+
+
+docker-compose build --no-cache app
+
+docker-compose up -d
+
+
+MariaDB [fjmdDB]> 
+create table fm_users ( firstname VARCHAR(20), lastname VARCHAR(20), dob DATE, sex CHAR(1), address VARCHAR(40), email VARCHAR(20), phone VARCHAR(20));
+Query OK, 0 rows affected (0.013 sec)
+
+MariaDB [fjmdDB]> show tables;
++------------------+
+| Tables_in_fjmdDB |
++------------------+
+| fm_users         |
++------------------+
+1 row in set (0.000 sec)
+
+
+MariaDB [fjmdDB]> 
+insert into fm_users VALUES ('Francisco', 'Moreno', '1970-10-16', 'M', '9030 Pinebreeze Riveerview FL 33578', 'fmtest@gmail.com', '352-5754933');
+Query OK, 1 row affected (0.007 sec)
+
+MariaDB [fjmdDB]> 
+insert into fm_users VALUES ('Celina', 'Baena', '1969-06-26', 'F', '9030 Pinebreeze Riverview FL 33578', 'cbtest@gmail.com', '352-5755439');
+Query OK, 1 row affected (0.002 sec)
+
+--------- /etc/os-release----------------------
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
